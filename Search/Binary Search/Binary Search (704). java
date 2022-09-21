@@ -1,0 +1,14 @@
+   int low = 0;
+        int high = nums.length-1;
+        while(low<=high){
+            int temp =nums[(int) Math.floor((high + low) /2)];
+            if(temp==target){
+                return temp;
+            }else if(temp>target){
+                high = temp - 1;
+            }else if(temp < target){
+                low = temp + 1;
+            }
+        }
+        return -1;
+    }
